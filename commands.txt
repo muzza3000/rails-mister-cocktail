@@ -1,0 +1,3 @@
+rails generate model cocktail name:string
+rails generate model ingredient name:string
+rails generate model dose cocktail:references ingredient:references
