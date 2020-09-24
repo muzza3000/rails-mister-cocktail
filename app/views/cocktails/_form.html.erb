@@ -1,0 +1,20 @@
+<!-- <%= simple_form_for(@cocktail) do |f| %>
+<%# We want to create a new cocktail with a name, an ingredient and a dose %>
+    <%= f.input :name %>
+    <%# <%= f.association :ingredients, as: :check_boxes, collection: @ingredients.pluck("name") %>
+    <%= f.submit class: 'btn btn-primary'%>
+<% end %> -->
+
+<%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+  <h3>Doses</h3>
+  <div id="doses">
+    <%= f.fields_for :doses do |dose| %>
+      <%= render 'dose_fields', f: dose %>
+    <% end %>
+    <div id="doses">
+      <%= link_to_add_association 'add dose', f, :doses %>
+    </div>
+  </div>
+  <%= f.submit %>
+<% end %>

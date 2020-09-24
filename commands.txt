@@ -1,3 +1,19 @@
+## model generation
 rails generate model cocktail name:string
 rails generate model ingredient name:string
-rails generate model dose cocktail:references ingredient:references
+rails generate model dose cocktail:references ingredient:references description:string
+
+## user stories
+
+# A user can see the list of cocktails
+GET "cocktails"
+
+# A user can see the details of a given cocktail, with the dose needed for each ingredient
+GET "cocktails/42"
+
+# A user can create a new cocktail
+GET "cocktails/new"
+POST "cocktails"
+
+rails generate controller Cocktails
+rails generate controller Doses
