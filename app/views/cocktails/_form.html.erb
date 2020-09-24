@@ -1,13 +1,12 @@
-<%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-  <h3>Doses</h3>
+<%= simple_form_for(@cocktail, :html=> { class: 'bg-dark' }) do |f| %>
+    <!--<%= f.input :name %>-->
   <div id="doses">
     <%= f.fields_for :doses do |dose| %>
       <%= render 'dose_fields', f: dose %>
     <% end %>
     <div id="doses">
-      <%= link_to_add_association 'add dose', f, :doses %>
+      <%= link_to_add_association 'Add Ingredient', f, :doses %>
     </div>
   </div>
-  <%= f.submit %>
+  <%= f.button :submit, 'Updae Recipe', class: 'btn btn-outline-secondary my-2'%>
 <% end %>

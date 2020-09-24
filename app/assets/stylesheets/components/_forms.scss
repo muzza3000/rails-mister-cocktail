@@ -1,0 +1,34 @@
+#doses {
+  // display: flex;
+  .nested-fields {
+    display:flex;
+  }
+}
+
+.vspace {
+  margin-bottom: 250px;
+}
+
+.remove_fields{
+  color: white;
+  padding: 5px;
+
+  height: 40px;
+  width: 110px;
+
+  &:hover {
+    text-decoration: none;
+    color: rgb(143, 114, 101);
+  }
+}
+
+.add_fields{
+  color: white;
+  padding: 5px;
+  height: 40px;
+  width: 110px;
+  &:hover {
+    text-decoration: none;
+    color: rgb(143, 114, 101);
+  }
+}

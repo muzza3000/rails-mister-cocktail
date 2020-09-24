@@ -1,27 +1,43 @@
-<h1>Cocktail list</h1>
-<ul>
-  <% @cocktails.each do |c| %>
-    <li><%= c.name %> - <%= link_to 'Open', cocktail_path(c) %></li>
-  <% end %>
-</ul>
+<div class="cocktail-banner text-light">
+ <div class="container">
+  <h1>Murray's Speakeasy</h1>
+ </div>
+</div>
+
+<div class="container">
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">
   Add Cocktail
 </button>
 
+  <div class="cards-grid">
+    <% @cocktails.each do |c| %>
+      <% image_url = 'https://source.unsplash.com/1300x600/?' + c.name.gsub(" ", "%20") %>
+
+      <div class="cocktail-card position-relative" style="background-image: url(<%= image_url %>)">
+        <%= link_to "", cocktail_path(c), class: "stretched-link" %>
+        <p><%= c.name %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add a new cocktail</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+    <div class="modal-content bg-dark ">
+      <div class="modal-header bg-dark ">
+        <h5 class="modal-title h5" id="exampleModalLongTitle">Add a new cocktail</h5>
+        <button type="button" class="close text-light btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">✖</span>
         </button>
       </div>
       <div class="modal-body">
-        <%= render 'form' %>
+        <%= render 'title_form' %>
       </div>
       <%# <div class="modal-footer"> %>
         <%# <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> %>

@@ -1,11 +1,49 @@
-<%= @cocktail.name %>
-<br>
-<% @cocktail.doses.each do |dose|  %>
-  <%= dose.description %> - <%= dose.ingredient.name %>
-  <br>
-<% end %>
+<div class="cocktail-banner text-light">
 
-<!---
-<%= render 'ingredients_form' %>
--->
-<%= render 'form' %>
+  <div class="container position-relative p-0">
+      <%= link_to 'Delete', cocktail_path(@cocktail), method: :delete, class: 'btn btn-outline-secondary', data: { confirm: "Are you sure?" } %>
+      <%= link_to 'Back to Cocktails', cocktails_path, class: 'btn btn-outline-secondary' %>
+    <div class="cocktail-title">
+      <% image_url = 'https://source.unsplash.com/300x300/?' + @cocktail.name.gsub(" ", "%20") %>
+      <div class="drink-avatar" style="background-image: url(<%= image_url %>)"></div>
+      <h1><%= @cocktail.name %></h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5 vspace">
+  <h2>Ingredients:</h2>
+    <div class="ingredients">
+      <% @cocktail.doses.each do |dose|  %>
+        <%= dose.description %> - <%= dose.ingredient.name %>
+      <br>
+      <% end %>
+    </div>
+</div>
+<div class="container mt-5">
+  <div class="row">
+
+      <div class="col-sm">
+        <%# From to add ingredients %>
+        <div class="cocktail-ingredients bg-dark">
+          <%= render 'form' %>
+        </div>
+      </div>
+
+      <div class="col-sm">
+      <%# Form to edit the title %>
+        <div class="bg-dark">
+          <%= render 'title_form' %>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+

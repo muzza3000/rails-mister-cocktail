@@ -1,0 +1,19 @@
+.cocktail-banner {
+  background-image:
+    /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 1)
+    ),
+    asset-url("lightbulbs-cropped.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0px 100px 0px;
+  color: white;
+  text-align: right;
+  // position: relative;
+
+  h1 {
+    font-size: 72px;
+  }
+}
+
