@@ -1,3 +1,5 @@
-<%= f.input :description %>
-<%= f.input :ingredient_id, as: :select, collection: Ingredient.all %>
-<%= link_to_remove_association 'remove dose', f %>
+<div class="nested-fields">
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, as: :select, collection: Ingredient.all %>
+  <%= link_to_remove_association 'remove dose', f %>
+</div>
