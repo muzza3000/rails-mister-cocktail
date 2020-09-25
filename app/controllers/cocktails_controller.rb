@@ -21,6 +21,10 @@ class CocktailsController < ApplicationController
 
   def update
     @cocktail = Cocktail.find(params['id'])
+    if params["cocktail"].nil?
+      # removes bug if the update button is selected without any ingredients
+      return render :show
+    end
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
   end
