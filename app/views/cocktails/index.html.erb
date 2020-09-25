@@ -15,8 +15,8 @@
 
   <div class="search-form">
     <form action="/cocktails" class="">
-      <input type="text" id="search" name="search" class="bg-dark text-light search">
-      <input type="submit" value="Search" class="btn btn-outline-secondary">
+      <input type="text" id="search" name="search" class="bg-dark text-light search-input">
+      <input type="submit" value="Search" class="btn btn-outline-secondary mx-1">
       <%= link_to 'Clear', cocktails_path, class: "btn btn-outline-secondary" %>
     </form>
   </div>
@@ -31,7 +31,7 @@
       <% image_url = 'https://source.unsplash.com/1300x600/?' + c.name.gsub(" ", "%20") %>
       <% end %>
 
-      <div class="cocktail-card position-relative" style="background-image: url(<%= image_url %>)">
+      <div class="cocktail-card position-relative" style="background-image: linear-gradient(rgba(0, 0, 0,0.1) 50%,rgba(0, 0, 0, 1)), url(<%= image_url %>)">
         <%= link_to "", cocktail_path(c), class: "stretched-link" %>
         <p><%= c.name %></p>
       </div>

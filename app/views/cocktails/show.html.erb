@@ -14,11 +14,11 @@
 </div>
 
 
-<div class="container mt-5 vspace">
-  <h2>Ingredients:</h2>
+<div class="container mt-4 vspace">
     <div class="ingredients">
+    <h2>Ingredients:</h2>
       <% @cocktail.doses.each do |dose|  %>
-        <%= dose.description %> - <%= dose.ingredient.name %>
+        <%= dose.description %> • <%= dose.ingredient.name %>
       <br>
       <% end %>
     </div>

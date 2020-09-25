@@ -2,7 +2,7 @@ class CocktailsController < ApplicationController
   def index
 
     if !params['search'].nil?
-      @cocktails = Cocktail.where("name LIKE ?", "%#{params['search']}%")
+      @cocktails = Cocktail.where("lower(name) LIKE ?", "%#{params['search'].downcase}%")
     else
       @cocktails = Cocktail.all
     end
