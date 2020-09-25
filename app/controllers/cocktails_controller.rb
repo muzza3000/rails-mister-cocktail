@@ -20,6 +20,7 @@ class CocktailsController < ApplicationController
   end
 
   def update
+    raise
     @cocktail = Cocktail.find(params['id'])
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
