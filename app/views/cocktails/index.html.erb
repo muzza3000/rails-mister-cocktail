@@ -13,7 +13,12 @@
 
   <div class="cards-grid">
     <% @cocktails.each do |c| %>
+
+      <% if c.photo.attached? %>
+      <% image_url = cloudinary_url(c.photo.key) %>
+      <% else %>
       <% image_url = 'https://source.unsplash.com/1300x600/?' + c.name.gsub(" ", "%20") %>
+      <% end %>
 
       <div class="cocktail-card position-relative" style="background-image: url(<%= image_url %>)">
         <%= link_to "", cocktail_path(c), class: "stretched-link" %>
@@ -22,7 +27,6 @@
     <% end %>
   </div>
 </div>
-
 
 
 
@@ -45,4 +49,5 @@
       <%# </div> %>
     </div>
   </div
+
 

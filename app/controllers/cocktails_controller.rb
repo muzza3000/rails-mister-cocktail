@@ -25,6 +25,7 @@ class CocktailsController < ApplicationController
       # removes bug if the update button is selected without any ingredients
       return render :show
     end
+    # raise
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
   end
@@ -38,6 +39,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, doses_attributes: [:id, :description, :ingredient_id, :_destroy])
+    params.require(:cocktail).permit(:name, :photo, doses_attributes: [:id, :description, :ingredient_id, :_destroy])
   end
 end

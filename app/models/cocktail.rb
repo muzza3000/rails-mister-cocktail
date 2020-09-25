@@ -5,4 +5,6 @@ class Cocktail < ApplicationRecord
   # This basically allows you to create a new dose from a cocktail
   #  c = Cocktail.create(name: "test", doses_attributes: [{ingredient_id: , description: },{...}])
   accepts_nested_attributes_for :doses, reject_if: :all_blank, allow_destroy: true
+
+  has_one_attached :photo
 end
