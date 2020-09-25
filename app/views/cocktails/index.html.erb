@@ -7,9 +7,20 @@
 <div class="container">
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-  Add Cocktail
-</button>
+
+<div class="search-bar">
+  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+    Add Cocktail
+  </button>
+
+  <div class="search-form">
+    <form action="/cocktails" class="">
+      <input type="text" id="search" name="search" class="bg-dark text-light search">
+      <input type="submit" value="Search" class="btn btn-outline-secondary">
+      <%= link_to 'Clear', cocktails_path, class: "btn btn-outline-secondary" %>
+    </form>
+  </div>
+</div>
 
   <div class="cards-grid">
     <% @cocktails.each do |c| %>
@@ -27,6 +38,7 @@
     <% end %>
   </div>
 </div>
+
 
 
 
