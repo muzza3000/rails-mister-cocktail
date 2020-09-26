@@ -25,6 +25,7 @@ class CocktailsController < ApplicationController
   end
 
   def update
+    # raise
     @cocktail = Cocktail.find(params['id'])
     if params["cocktail"].nil?
       # removes bug if the update button is selected without any ingredients
@@ -44,6 +45,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :search, :photo, doses_attributes: [:id, :description, :ingredient_id, :_destroy])
+    params.require(:cocktail).permit(:name, :search, photos: [], doses_attributes: [:id, :description, :ingredient_id, :_destroy])
   end
 end

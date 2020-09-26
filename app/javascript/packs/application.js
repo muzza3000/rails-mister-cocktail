@@ -13,6 +13,8 @@ require("@nathanvda/cocoon")
 // import the same as require but is preferred in the this case
 import 'bootstrap';
 
+require("dropzone")
+
 
 
 
