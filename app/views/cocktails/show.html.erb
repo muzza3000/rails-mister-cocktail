@@ -5,7 +5,7 @@
       <%= link_to 'Back to Cocktails', cocktails_path, class: 'btn btn-outline-secondary' %>
     <div class="cocktail-title">
 
-      <% image_url = @cocktail.photos.attached? ? cloudinary_url(@cocktail.photos.key) : image_path("no_file_uploaded.png") %>
+      <% image_url = @cocktail.photo.attached? ? cloudinary_url(@cocktail.photo.key) : image_path("no_file_uploaded.png") %>
       <div class="drink-avatar" style="background-image: url(<%= image_url %>)"></div>
       <h1><%= @cocktail.name %></h1>
     </div>

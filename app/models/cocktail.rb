@@ -6,6 +6,6 @@ class Cocktail < ApplicationRecord
   #  c = Cocktail.create(name: "test", doses_attributes: [{ingredient_id: , description: },{...}])
   accepts_nested_attributes_for :doses, reject_if: :all_blank, allow_destroy: true
 
-  # has_one_attached :photo
-  has_many_attached :photos
-endgit 
+  has_one_attached :photo
+  # has_many_attached :photos
+end

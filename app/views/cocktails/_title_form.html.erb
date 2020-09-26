@@ -1,6 +1,6 @@
 <%= simple_form_for(@cocktail, :html=> { class: 'bg-dark dropzone', id: "my-awesome-dropzone" }) do |f| %>
     <%= f.input :name, label: false  %>
-    <%= f.input :photos, as: :file, label: false,  value: @cocktail.photos, class: "dropzone" %>
+    <%= f.input :photo, as: :file, label: false,  value: @cocktail.photo, class: "dropzone", data: { target: 'dropzone.input' } %>
     <% btn_text = @cocktail.id.nil? ? "Create Cocktail" : "Update Name" %>
     <%= f.button :submit, btn_text, class: 'btn btn-outline-secondary my-2'%>
 <% end %>
