@@ -12,10 +12,19 @@ require("channels")
 require("@nathanvda/cocoon")
 // import the same as require but is preferred in the this case
 import 'bootstrap';
-// import 'dropzone';
-console.log("Hello from app/javascript/packs/application.js!");
+import 'dropzone';
+
+console.log("Hello application.js!");
+console.log("Hello application.js!");
 
 
+// Dropzone.autoDiscover = false;
+console.log("loaded");
+new Dropzone("myAwesomeDropzone", {
+  paramName: "photo",
+  maxFilesize: 2,
+  dictDefaultMessage: 'Testing'
+});
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -23,11 +32,3 @@ console.log("Hello from app/javascript/packs/application.js!");
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-// Dropzone.autoDiscover = false;
-// document.addEventListener("turbolinks:load", function () {
-//   new Dropzone("myAwesomeDropzone", {
-//     paramName: "photo",
-//     maxFilesize: 2,
-//     dictDefaultMessage: 'Testing'
-//   });
-// });
