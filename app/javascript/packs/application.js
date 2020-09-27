@@ -14,6 +14,7 @@ require("@nathanvda/cocoon")
 import 'bootstrap';
 import 'components/dropzone';
 
+
 // Add stimulus from the installed yarn package
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
@@ -32,3 +33,5 @@ console.log(">>> Hello from application.js!");
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+console.log('application.js loaded!');
