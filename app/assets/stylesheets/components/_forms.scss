@@ -48,34 +48,34 @@
 
 // Dropzone Styling
 .dropzone {
-  border: 2px dashed $harvest-gold;
-  border-radius: 15px;
-  background-color: rgb(189, 189, 189);
-  color: $smoky-black;
-  text-align: center;
+  border: 2px dashed $harvest-gold  !important;
+  border-radius: 15px !important;
+  background-color: rgb(189, 189, 189) !important;
+  color: $smoky-black !important;
+  text-align: center !important;
 
   &:dz-drag-hover {
-    border: 2px dashed $harvest-gold;
-    border-radius: 15px;
-    background-color: rgb(131, 131, 131);
-    color: $smoky-black;
+    border: 2px dashed $harvest-gold !important;
+    border-radius: 15px !important;
+    background-color: rgb(131, 131, 131) !important;
+    color: $smoky-black !important;
 
     .dz-message {
-      opacity: 0.9;
+      opacity: 0.9 !important;
     }
   }
 }
 
 .dz-image-preview {
-  background-color: transparent !important;
+  background-color: transparent  !important;
 }
 a.dz-remove {
-  color: white;
+  color: white !important;
 }
 
 .dz-error-message {
-  color: white;
+  color: white !important;
 }
 .dropzone .dz-preview .dz-error-message {
-  color: white !important;
+  color: white  !important;
 }
