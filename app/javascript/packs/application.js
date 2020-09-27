@@ -12,9 +12,8 @@ require("channels")
 require("@nathanvda/cocoon")
 // import the same as require but is preferred in the this case
 import 'bootstrap';
-
-require("dropzone")
-
+// import 'dropzone';
+console.log("Hello from app/javascript/packs/application.js!");
 
 
 
@@ -24,15 +23,11 @@ require("dropzone")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-
-Dropzone.options.myAwesomeDropzone = {
-  paramName: "cocktail[photos][]", // The name that will be used to transfer the file
-  maxFilesize: 2, // MB
-  accept: function(file, done) {
-    if (file.name == "justinbieber.jpg") {
-      done("Naha, you don't.");
-    }
-    else { done(); }
-  }
-};
+// Dropzone.autoDiscover = false;
+// document.addEventListener("turbolinks:load", function () {
+//   new Dropzone("myAwesomeDropzone", {
+//     paramName: "photo",
+//     maxFilesize: 2,
+//     dictDefaultMessage: 'Testing'
+//   });
+// });
