@@ -12,7 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
-@import "dropzone/basic";
+// Import the css from dropzone
+@import "dropzone/dist/min/dropzone.min.css";
+@import "dropzone/dist/min/basic.min.css";
 
 /* Box Sizing */
 html {
@@ -22,10 +24,10 @@ html {
   box-sizing: inherit;
 }
 
-.clipboard-button {
+.slide {
   display: none;
 }
 
-.clipboard--supported .clipboard-button {
-  display: initial;
+.slide.slide--current {
+  display: block;
 }

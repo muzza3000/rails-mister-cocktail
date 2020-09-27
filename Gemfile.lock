@@ -77,8 +77,6 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
-    dropzonejs-rails (0.8.5)
-      rails (> 3.1)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -242,7 +240,6 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   cocoon
   dotenv-rails
-  dropzonejs-rails
   font-awesome-sass (~> 5.12.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)

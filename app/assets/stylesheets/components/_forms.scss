@@ -45,3 +45,37 @@
   background-color: transparent;
 }
 
+
+// Dropzone Styling
+.dropzone {
+  border: 2px dashed $harvest-gold;
+  border-radius: 15px;
+  background-color: rgb(189, 189, 189);
+  color: $smoky-black;
+  text-align: center;
+
+  &:dz-drag-hover {
+    border: 2px dashed $harvest-gold;
+    border-radius: 15px;
+    background-color: rgb(131, 131, 131);
+    color: $smoky-black;
+
+    .dz-message {
+      opacity: 0.9;
+    }
+  }
+}
+
+.dz-image-preview {
+  background-color: transparent !important;
+}
+a.dz-remove {
+  color: white;
+}
+
+.dz-error-message {
+  color: white;
+}
+.dropzone .dz-preview .dz-error-message {
+  color: white !important;
+}

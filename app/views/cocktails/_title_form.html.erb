@@ -1,5 +1,12 @@
-<%= simple_form_for(@cocktail, :html=> { multipart: true, class: 'bg-dark dropzone', id: "my-awesome-dropzone" }) do |f| %>
+<!-- Not in use for now as the dropzone component didnt play nicely with simple form-->
+
+<!-- <% btn_text = @cocktail.id.nil? ? "Create Cocktail" : "Update Name" %>
+
+<%= simple_form_for(@cocktail, :html=> { multipart: true, class: 'bg-dark'}) do |f| %>
+
     <%= f.input :name, label: false  %>
-    <% btn_text = @cocktail.id.nil? ? "Create Cocktail" : "Update Name" %>
+    <%= f.input :photo, as: :file, label: false  %>
+
     <%= f.button :submit, btn_text, id: 'submit-all', class: 'btn btn-outline-secondary my-2'%>
-<% end %>
+
+<% end %> -->

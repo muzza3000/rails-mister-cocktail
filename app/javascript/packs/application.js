@@ -24,7 +24,7 @@ application.load(definitionsFromContext(context))
 // Finished adding Stimulus
 
 // log to the console to ensure this file has loaded.
-console.log("Hello application.js!");
+console.log(">>> Hello from application.js!");
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

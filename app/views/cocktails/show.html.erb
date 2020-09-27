@@ -35,19 +35,9 @@
       <div class="col-sm">
       <%# Form to edit the title %>
         <div class="bg-dark">
-          <%= render 'title_form' %>
+          <%= render 'drag_and_drop_upload' %>
         </div>
       </div>
 
   </div>
 </div>
-
-<div data-controller="clipboard" data-clipboard-index="0">
-  PIN: <input data-target="clipboard.source" type="text" value="1234">
-  <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
-  <button data-action="click->clipboard#pasteIndex" class="clipboard-button">Paste Index Value</button>
-</div>
-
-
-
-
